@@ -25,13 +25,7 @@ const ProductSlider = () => {
       {products.map((product) => (
         <Carousel.Item key={product._id}>
           <Link to={`/product/${product._id}`}>
-            {/* Image component is fluid, which should make it responsive */}
-            <Image
-              src={product.image}
-              alt={product.name}
-              fluid
-              className="carousel-image"
-            />
+            <Image src={product.image} alt={product.name} />
             <Carousel.Caption className="carousel-caption">
               <h2>
                 {product.name} (${product.price})
