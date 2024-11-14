@@ -9,8 +9,7 @@ import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
-
-const cors = require("cors");
+import cors from "cors";
 
 const corsOptions = {
   origin: "https://shop115.onrender.com", // Frontend URL
