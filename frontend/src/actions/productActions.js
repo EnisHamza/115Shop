@@ -53,7 +53,7 @@ export const listProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `https://shop115.onrender.com/api/products/${id}`
+      `https://shop115-backend.onrender.com/api/products/${id}`
     );
 
     dispatch({
