@@ -17,8 +17,6 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
 };
 
-app.use(cors(corsOptions));
-
 dotenv.config();
 
 connectDB();
@@ -28,6 +26,8 @@ const app = express();
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
