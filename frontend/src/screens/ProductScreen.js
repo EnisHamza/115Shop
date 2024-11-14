@@ -48,7 +48,9 @@ const ProductScreen = ({ history, match }) => {
   }, [dispatch, match, successProductReview]);
 
   const addToCartHandler = () => {
-    history.push(`/cart/${match.params.id}?qty=${qty}`);
+    history.push(
+      `https://shop115.onrender.com/cart/${match.params.id}?qty=${qty}`
+    );
   };
 
   const submitHandler = (e) => {
@@ -200,7 +202,11 @@ const ProductScreen = ({ history, match }) => {
                     </Form>
                   ) : (
                     <Message>
-                      Please <Link to="/login">Sign In</Link> to write a review
+                      Please{" "}
+                      <Link to="https://shop115.onrender.com/login">
+                        Sign In
+                      </Link>{" "}
+                      to write a review
                       {""}
                     </Message>
                   )}
