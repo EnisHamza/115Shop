@@ -30,7 +30,7 @@ export const listProducts =
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
       const { data } = await axios.get(
-        `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `https://shop115-backend.onrender.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       );
 
       dispatch({
