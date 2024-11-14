@@ -36,7 +36,8 @@ h1 {
 .carousel img {
   height: 300px;
   padding: 30px;
-  margin: 40px;
+  margin-top: 60px;
+  margin-bottom: 28px;
   border-radius: 50%;
 }
 .carousel a {
