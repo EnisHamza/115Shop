@@ -31,10 +31,10 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
-app.use("https://shop115-backend.onrender.com/api/products", productRoutes);
-app.use("https://shop115-backend.onrender.com/api/users", userRoutes);
-app.use("https://shop115-backend.onrender.com/api/orders", orderRoutes);
-app.use("https://shop115-backend.onrender.com/api/upload", uploadRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/upload", uploadRoutes);
 
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
