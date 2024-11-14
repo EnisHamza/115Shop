@@ -10,6 +10,16 @@ import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 
+const cors = require("cors");
+
+const corsOptions = {
+  origin: "https://shop115.onrender.com", // Frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"], // Add any other allowed methods
+  allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
+};
+
+app.use(cors(corsOptions));
+
 dotenv.config();
 
 connectDB();
